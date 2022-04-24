@@ -1,0 +1,50 @@
+### objectifs
+  ajouter une ligne comptable
+  modifier une ligne comptable
+  supprimer une ligne comptable
+  avoir une vue de toutes les lignes comptables
+  ajouter un inscrit
+  modifier un inscrit
+  supprimer un inscrit
+  avoir une vue de tous les inscrits
+
+### organisation
+  mobile first
+  combien de pages différentes ?
+  écran récapitulatif des lignes comptables
+  écran récapitulatif des inscrits
+  filtres sur les lignes comptables
+  filtres sur les adhérents
+  graphiques/diagrammes
+
+### éléments à créer
+  page liste de joueurs
+  page liste de lignes comptables
+  formulaire d'identification (pas de possibilité de créer un compte)
+  formulaire d'ajout d'inscrits
+  
+### vérifications
+  quand j'ajoute un inscrit, je vérifie que le numéro de licence n'existe pas déjà dans la base
+
+### remarques
+  devise implicite, tout est supposé être en euros
+
+### BDD
+  table users (admins créés depuis firebase)
+  table accounting_entries (lignes comptables) => id, type*, payment_methods*, nature*, amount*, subscribers, memo
+  table subscribers (inscrits) => id, firstname*, name*, sex, date_of_birth, licence_number*
+  //table formulas (lookup)
+  table payment_methods (lookup)
+  table accounting_entries_types (lookup) (credit/debit)
+  table accounting_entries_natures (lookup) (remboursement tournoi, vente volants, ...)
+
+### améliorations
+  state pour toggle la visibilité password selon qu'on clique sur l'icône en forme d'oeil (endAdornement)
+  dialog box pour demander la confirmation de se déconnecter
+  message d'erreur affiché lorsque connexion échouée à cause d'un mauvais couple email/password
+  champs obligatoires sur formulaires à différencier des autres
+  message de création d'un inscrit en pop up
+  hover des boutons à définir
+  faire en sorte d'afficher toute la modale en mode mobile
+  faire en sorte qu'il n'y ait qu'une seule modale en tout et non une seule pour chaque ligne d'édition
+
