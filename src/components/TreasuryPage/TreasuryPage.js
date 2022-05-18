@@ -23,6 +23,7 @@ import NavBar from "../NavBar/NavBar";
 
 /* Style */
 import { colors, styleAddButton } from "../../style";
+import "./TreasuryPage.css";
 
 /* Definition */
 const TreasuryPage = () => {
@@ -226,6 +227,10 @@ const TreasuryPage = () => {
                 id: false,
               },
             },
+          }}
+          getRowClassName={(params) => {
+            let colorClass = params.row.type === "Crédit" ? "green--row" : "red--row";
+            return colorClass;
           }}
         />
       </Grid>

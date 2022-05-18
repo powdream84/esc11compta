@@ -42,9 +42,11 @@
   state pour toggle la visibilité password selon qu'on clique sur l'icône en forme d'oeil (endAdornement)
   dialog box pour demander la confirmation de se déconnecter
   message d'erreur affiché lorsque connexion échouée à cause d'un mauvais couple email/password
-  champs obligatoires sur formulaires à différencier des autres
   message de création d'un inscrit en pop up
   hover des boutons à définir
   faire en sorte d'afficher toute la modale en mode mobile
   faire en sorte qu'il n'y ait qu'une seule modale en tout et non une seule pour chaque ligne d'édition
+  déconnecter automatiquement au bout de 30 mn (sans activité si possible)
+  possibilité d'ajouter à la main un nouveau poste de dépenses ou de recettes (nouvel onglet paramétrage ?)
+  affichage sous forme de graphiques divers dans onglet bilan
 

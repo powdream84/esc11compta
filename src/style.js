@@ -2,6 +2,7 @@ export const colors = {
   mainBlue: "#1E388F",
   mainRed: "#A52A2A",
   lightGrey: "#EAEAEA",
+  creditsGreen: "#0DA60F",
 };
 
 export const styleSubmitButton = {

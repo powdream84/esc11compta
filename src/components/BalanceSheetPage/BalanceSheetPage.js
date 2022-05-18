@@ -114,19 +114,29 @@ const BalanceSheetPage = () => {
       <Grid item xs={12} sx={{ mb: "5rem" }}>
         <NavBar />
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={11} sm={7} sx={{ mb: "5rem" }}>
         <TableContainer component={Paper}>
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell colSpan={3} align="center" sx={{ backgroundColor: colors.mainRed, color: "#FFF", fontSize: "1.5rem", fontWeight: "bold" }}>
+                <TableCell
+                  colSpan={3}
+                  align="center"
+                  sx={{ backgroundColor: colors.creditsGreen, color: "#FFF", fontSize: "1.5rem", fontWeight: "bold" }}
+                >
                   Crédits
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Nature</TableCell>
-                <TableCell align="right">Nombre d'opérations</TableCell>
-                <TableCell align="right">Sous-total</TableCell>
+                <TableCell align="center" sx={{ width: "40%", fontWeight: "bold" }}>
+                  Nature
+                </TableCell>
+                <TableCell align="right" sx={{ width: "30%", fontWeight: "bold" }}>
+                  Nombre d'opérations
+                </TableCell>
+                <TableCell align="right" sx={{ width: "30%", fontWeight: "bold" }}>
+                  Sous-total
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -139,8 +149,8 @@ const BalanceSheetPage = () => {
                   <TableCell align="right">{row.total}</TableCell>
                 </TableRow>
               ))}
-              <TableRow key="debitsTotal" sx={{ backgroundColor: colors.lightGrey, "&:last-child td, &:last-child th": { border: 0 } }}>
-                <TableCell component="th" scope="row">
+              <TableRow key="creditsTotal" sx={{ backgroundColor: colors.lightGrey, "&:last-child td, &:last-child th": { border: 0 } }}>
+                <TableCell component="th" scope="row" align="right" sx={{ fontWeight: "bold" }}>
                   Total
                 </TableCell>
                 <TableCell colSpan={2} align="right">
@@ -151,7 +161,7 @@ const BalanceSheetPage = () => {
           </Table>
         </TableContainer>
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={11} sm={7} sx={{ mb: "5rem" }}>
         <TableContainer component={Paper}>
           <Table aria-label="simple table">
             <TableHead>
@@ -161,9 +171,15 @@ const BalanceSheetPage = () => {
                 </TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Nature</TableCell>
-                <TableCell align="right">Nombre d'opérations</TableCell>
-                <TableCell align="right">Sous-total</TableCell>
+                <TableCell align="center" sx={{ width: "40%", fontWeight: "bold" }}>
+                  Nature
+                </TableCell>
+                <TableCell align="right" sx={{ width: "30%", fontWeight: "bold" }}>
+                  Nombre d'opérations
+                </TableCell>
+                <TableCell align="right" sx={{ width: "30%", fontWeight: "bold" }}>
+                  Sous-total
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -177,7 +193,7 @@ const BalanceSheetPage = () => {
                 </TableRow>
               ))}
               <TableRow key="debitsTotal" sx={{ backgroundColor: colors.lightGrey, "&:last-child td, &:last-child th": { border: 0 } }}>
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" align="right" sx={{ fontWeight: "bold" }}>
                   Total
                 </TableCell>
                 <TableCell colSpan={2} align="right">
